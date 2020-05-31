@@ -1,11 +1,11 @@
 import React from 'react';
-import app from '../firebase'
+import firebaseAuth from '../firebase'
 
 function Home() {
     return (
         <>
             <h1>Home</h1>
-            {/*<button onClick={() => firebase.auth().signOut() }>Sign Out</button>*/}
+            <button onClick={() => firebaseAuth.auth().signOut() }>Sign Out</button>
         </>
     );
 }
