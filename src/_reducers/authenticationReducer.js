@@ -4,7 +4,7 @@ let user = { loggedIn: false };
 
 const initialState = user ? {loggedIn: true, user} : {};
 
-export const authentication = (state = initialState, action) => {
+export const authenticationReducer = (state = initialState, action) => {
     
     switch (action.type) {
         case "LOGIN_REQUEST":

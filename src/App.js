@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { history } from './_helpers/history'
 
 import PrivateRoute from './_components/PrivateRoute'
-import LoginPage from './_components/LoginPage'
+import {LoginPage} from './_components/LoginPage'
 import { RegisterPage } from './_components/RegisterPage'
 import HomePage from './_components/HomePage'
 

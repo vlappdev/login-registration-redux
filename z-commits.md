@@ -6,4 +6,5 @@
 ## Continue new project 02-firebase-redux-react
 
 03 - fixed firebase .env
-02 - basic files and registration page (console.log())
+04 - basic files and registration page (console.log())
+05 - added basic functionality for Login0 page (console.log())
