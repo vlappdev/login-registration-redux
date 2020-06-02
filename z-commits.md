@@ -5,4 +5,5 @@
 
 ## Continue new project 02-firebase-redux-react
 
-03 - fixed firebase .env 
+03 - fixed firebase .env
+02 - basic files and registration page (console.log())

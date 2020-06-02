@@ -1,7 +1,7 @@
 import React from 'react';
 import firebaseAuth from '../firebase'
 
-function Home() {
+function HomePage() {
     return (
         <>
             <h1>Home</h1>
@@ -10,4 +10,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default HomePage;
