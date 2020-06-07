@@ -9,3 +9,4 @@
 04 - basic files and registration page (console.log())
 05 - added basic functionality for Login0 page (console.log())
 06 - added basic functionality login/logout
+07 - added alert message for Login

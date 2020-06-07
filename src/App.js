@@ -4,26 +4,42 @@ import { connect } from 'react-redux'
 import { history } from './_helpers/history'
 
 import PrivateRoute from './_components/PrivateRoute'
-import {LoginPage} from './_components/LoginPage'
+import { LoginPage } from './_components/LoginPage'
 import { RegisterPage } from './_components/RegisterPage'
 import MemberPage from './_components/MemberPage'
 
 class App extends Component {
     render() {
-        console.log(history);
+        const { message } = this.props;
         return (
-            <Router history={history}>
-                <Switch>
-                    <PrivateRoute exact path="/" component={ MemberPage }/>
-                    <Route path="/login" component={ LoginPage }/>
-                    <Route path="/register" component={ RegisterPage }/>
-                </Switch>
-            </Router>
+            <div>
+                { message && <div>{message}</div>}
+                <Router history={history}>
+                    <Switch>
+                        <PrivateRoute exact path="/" component={ MemberPage }/>
+                        <Route path="/login" component={ LoginPage }/>
+                        <Route path="/register" component={ RegisterPage }/>
+                    </Switch>
+                </Router>
+            </div>
         );
     }
 }
 
-export default App;
+const mapStateToProps = (state) =>{
+    const { alertReducer } = state;
+    return alertReducer
+};
+
+
+//mapDispatchToProps
+// const actionCreators = {
+//
+// };
+
+const connectedApp = connect(mapStateToProps)(App)
+
+export { connectedApp as App };
 
 
 

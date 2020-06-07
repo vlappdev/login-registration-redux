@@ -17,6 +17,8 @@ export const authenticationReducer = (state = initialState, action) => {
                 loggedIn: true,
                 user: action.user
             };
+        case "LOGIN_FAILURE":
+            return {};
         case "LOGOUT":
             return {};
         default:

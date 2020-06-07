@@ -14,14 +14,15 @@ import firebaseAuth from '../firebase'
     }
 
     function login(email, password){
-        console.log(email);
-        console.log(password)
         return firebaseAuth.auth().signInWithEmailAndPassword(email, password)
                 .then((user)=>{
-                    localStorage.setItem('email', user.user.email)
-                    console.log('ulogovan')
-                    console.log(user.user.email);firebaseAuth.auth().signOut()
+                    localStorage.setItem('email', user.user.email);
+                    //firebaseAuth.auth().signOut()
                     return user
+                })
+                .catch((error)=>{
+                    console.log(error)
+                    return Promise.reject(error)
                 })
     }
 

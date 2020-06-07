@@ -4,14 +4,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 //import firebaseAuth from '../firebase'
-
-
 import { userActions } from '../_actions/userActions'
-
-
-
-
-
 
 class LoginPage extends Component{
     constructor(){

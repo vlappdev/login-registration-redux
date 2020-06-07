@@ -1,5 +1,6 @@
 import { userService } from '../_services/userService'
 import { history } from '../_helpers/history'
+import { alertActions } from './alertActions'
 
     export const userActions = {
         register,
@@ -10,7 +11,7 @@ import { history } from '../_helpers/history'
     function register(user){
 
         return dispatch => {
-            dispatch(request(user))
+            dispatch(request(user));
 
             history.push('/login')
 
@@ -43,14 +44,20 @@ import { history } from '../_helpers/history'
 
         return dispatch => {
             //dispatch(request({ email }))
-            const test  = userService.login( email, password )
+            const test = userService.login( email, password )
                 .then(
                     user => {
                         console.log(user)
-                        dispatch( success(user) )
+                        dispatch(success(user) )
                         history.push('/')
+                    },
+                    error => {
+                        dispatch(failure(error.message));
+                        dispatch(alertActions.error(error.message));
                     }
                 );
+
+            console.log(test)
         };
 
         function request(user){
