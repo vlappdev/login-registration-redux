@@ -86,8 +86,9 @@ class RegisterPage extends Component{
 }
 
 const mapStateToProps = (state) => {
-    console.log(state.registrationReducer)
-    //return state
+    console.log(state)
+    const{ registering } = state.registrationReducer
+    return { registering }
 };
 
 //MapDispatchToProps
