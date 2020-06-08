@@ -13,3 +13,4 @@
 08 - added functionality for remove alert on Login page
 09 - added error message for registration
 10 - fixed logout method
+11 - added error messages Registration ang Login fields

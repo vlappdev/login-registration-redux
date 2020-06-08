@@ -40,6 +40,8 @@ class LoginPage extends Component{
     };
 
     render(){
+        // console.log(this.email);
+        // console.log(this.submitted);
         return (
             <div>
                 <h1>Log in</h1>
@@ -47,10 +49,14 @@ class LoginPage extends Component{
                     <label>
                         Email
                         <input name="email" onChange={this.handleChange} value={this.state.email} type="email" placeholder="Email" />
+                        { this.state.submitted && !this.state.email &&
+                        <div>Username is required</div> }
                     </label>
                     <label>
                         Password
                         <input name="password" onChange={this.handleChange} value={this.state.password} type="password" placeholder="Password" />
+                        { this.state.submitted && !this.state.password &&
+                        <div>Password is required</div>}
                     </label>
                     <button type="submit">Log in</button>
                     <Link to="/register" className="btn-link">Register</Link>
