@@ -7,14 +7,16 @@ import { Link } from 'react-router-dom'
 import { userActions } from '../_actions/userActions'
 
 class LoginPage extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
         this.state = {
             email: '',
             password: '',
             submitted: false
-        }
+        };
+
+        this.props.logout()
     }
 
     handleChange = (e) => {
@@ -27,41 +29,15 @@ class LoginPage extends Component{
     handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log(this.props)
-
         this.setState({
             submitted: true
         });
 
         const{ email, password } = this.state
         if(email && password){
-            console.log(this.state);
             this.props.login(email, password)
         }
     };
-
-    //const handleLogin = useCallback(
-        //console.log("LOgin")
-        // async event => {
-        //     event.preventDefault();
-        //     const { email, password } = event.target.elements;
-        //
-        //     try{
-        //         await firebaseAuth
-        //             .auth()
-        //             .signInWithEmailAndPassword(email.value, password.value);
-        //         history.push("/")
-        //     } catch (err) {
-        //         alert(err)
-        //     }
-        // }, [history]
-    //);
-
-    // const { currentUser } = useContext( AuthContext );
-
-    // if(currentUser){
-    //     return <Redirect to="/" />
-    // }
 
     render(){
         return (
@@ -87,13 +63,14 @@ class LoginPage extends Component{
 
 
 const mapStateToProps = (state) => {
-    console.log(state.authentication)
-    //return state
+     const { loggedIn } = state.authenticationReducer;
+    return { loggedIn }
 };
 
+//mapDispatchToProps
 const actionCreators = {
-    login: userActions.login
-    //logout:
+    login: userActions.login,
+    logout: userActions.logout
 };
 
 const connectedLoginPage = connect(mapStateToProps, actionCreators)(LoginPage);

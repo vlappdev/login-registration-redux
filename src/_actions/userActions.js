@@ -28,7 +28,6 @@ import { alertActions } from './alertActions'
         };
 
         function request(user){
-            console.log(user)
             return {
                 type: "REGISTER_REQUEST",
                 user
@@ -88,7 +87,6 @@ import { alertActions } from './alertActions'
 
     function logout() {
         userService.logout();
-
         return { type: "LOGOUT"}
     }
 

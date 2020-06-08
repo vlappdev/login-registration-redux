@@ -34,8 +34,8 @@ import firebaseAuth from '../firebase'
 
     function logout() {
         firebaseAuth.auth().signOut()
-            .then(param => {
-                console.log(param);
+            .then(() => {
+                console.log('Signed out');
             });
-        localStorage.removeItem('user');
+        localStorage.removeItem('email');
     }
