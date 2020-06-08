@@ -9,6 +9,8 @@ export const alertReducer = (state = {}, action) => {
             return {
                 message: action.message
             };
+        case "ALERT_CLEAR":
+            return{};
         default:
             return state
     }

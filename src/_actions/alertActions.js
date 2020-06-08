@@ -1,20 +1,27 @@
 
 
 const success  = ( message ) => {
-    return {
+    return{
         type: "ALERT_SUCCESS",
         message
     }
 };
 
 const error = ( message ) => {
-    return {
+    return{
         type: "ALERT_ERROR",
         message
     }
 };
 
+const clear = () => {
+    return{
+        type: "ALERT_CLEAR"
+    }
+};
+
 export const alertActions = {
     success,
-    error
+    error,
+    clear
 };

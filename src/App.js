@@ -7,8 +7,19 @@ import PrivateRoute from './_components/PrivateRoute'
 import { LoginPage } from './_components/LoginPage'
 import { RegisterPage } from './_components/RegisterPage'
 import MemberPage from './_components/MemberPage'
+import { alertActions } from './_actions/alertActions'
 
 class App extends Component {
+    constructor(props){
+        super(props);
+
+        history.listen((location, action) => {
+            //clear alert on location changes
+            this.props.clearAlerts()
+        });
+
+        console.log(this.props)
+    }
     render() {
         const { message } = this.props;
         return (
@@ -33,41 +44,10 @@ const mapStateToProps = (state) =>{
 
 
 //mapDispatchToProps
-// const actionCreators = {
-//
-// };
+const actionCreators = {
+    clearAlerts: alertActions.clear
+};
 
-const connectedApp = connect(mapStateToProps)(App)
+const connectedApp = connect(mapStateToProps, actionCreators)(App)
 
 export { connectedApp as App };
-
-
-
-
-
-
-
-// import React from 'react';
-// import './App.css';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import MemberPage from './_components/MemberPage'
-// import Login from './_components/Login'
-// import SignUp from './_components/SignUp'
-// import { AuthProvider } from './_components/Auth'
-// import PrivateRoute from "./_components/PrivateRoute";
-//
-// function App() {
-//     return (
-//         <AuthProvider>
-//             <Router>
-//                 <div>
-//                     <PrivateRoute exact path='/' component={ MemberPage } />
-//                     <Route exact path='/login' component={ Login } />
-//                     <Route exact path='/signup' component={ SignUp } />
-//                 </div>
-//             </Router>
-//         </AuthProvider>
-//     );
-// }
-//
-// export default App;

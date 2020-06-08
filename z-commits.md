@@ -10,3 +10,4 @@
 05 - added basic functionality for Login0 page (console.log())
 06 - added basic functionality login/logout
 07 - added alert message for Login
+08 - added functionality for remove alert on Login page
