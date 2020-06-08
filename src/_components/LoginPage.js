@@ -91,9 +91,6 @@ const mapStateToProps = (state) => {
     //return state
 };
 
-
-console.log(userActions);
-
 const actionCreators = {
     login: userActions.login
     //logout:

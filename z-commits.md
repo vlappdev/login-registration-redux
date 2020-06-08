@@ -11,3 +11,4 @@
 06 - added basic functionality login/logout
 07 - added alert message for Login
 08 - added functionality for remove alert on Login page
+09 - added error message for registration

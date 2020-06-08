@@ -17,8 +17,6 @@ class App extends Component {
             //clear alert on location changes
             this.props.clearAlerts()
         });
-
-        console.log(this.props)
     }
     render() {
         const { message } = this.props;

@@ -13,15 +13,18 @@ import { alertActions } from './alertActions'
         return dispatch => {
             dispatch(request(user));
 
-            history.push('/login')
-
-
-            // userService.register(user)
-            //     .then(
-            //         (user) => {
-            //             dispatch(success());
-            //             history.push('/login')
-            //     })
+            userService.register(user)
+                .then(
+                    (user) => {
+                        dispatch(success());
+                        history.push('/login')
+                        dispatch(alertActions.success('Registration successful'))
+                    },
+                    error => {
+                        console.log(error.message);
+                        dispatch(alertActions.error(error.message))
+                    }
+                )
         };
 
         function request(user){
@@ -48,7 +51,7 @@ import { alertActions } from './alertActions'
                 .then(
                     user => {
                         console.log(user)
-                        dispatch(success(user) )
+                        dispatch( success(user) );
                         history.push('/')
                     },
                     error => {
