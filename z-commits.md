@@ -16,3 +16,4 @@
 11 - added error messages Registration ang Login fields
 12 - added style for Login page
 13 - added style for Registration page
+14 - set project for gh-pages
