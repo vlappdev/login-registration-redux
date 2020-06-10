@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/02-firebase-redux-react/static/css/main.1d194e01.chunk.css",
+    "main.js": "/02-firebase-redux-react/static/js/main.9a903899.chunk.js",
+    "main.js.map": "/02-firebase-redux-react/static/js/main.9a903899.chunk.js.map",
+    "runtime-main.js": "/02-firebase-redux-react/static/js/runtime-main.58413808.js",
+    "runtime-main.js.map": "/02-firebase-redux-react/static/js/runtime-main.58413808.js.map",
+    "static/js/2.87749186.chunk.js": "/02-firebase-redux-react/static/js/2.87749186.chunk.js",
+    "static/js/2.87749186.chunk.js.map": "/02-firebase-redux-react/static/js/2.87749186.chunk.js.map",
+    "index.html": "/02-firebase-redux-react/index.html",
+    "precache-manifest.0db33285345fb1151153e819bab89abe.js": "/02-firebase-redux-react/precache-manifest.0db33285345fb1151153e819bab89abe.js",
+    "service-worker.js": "/02-firebase-redux-react/service-worker.js",
+    "static/css/main.1d194e01.chunk.css.map": "/02-firebase-redux-react/static/css/main.1d194e01.chunk.css.map",
+    "static/js/2.87749186.chunk.js.LICENSE.txt": "/02-firebase-redux-react/static/js/2.87749186.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.58413808.js",
+    "static/js/2.87749186.chunk.js",
+    "static/css/main.1d194e01.chunk.css",
+    "static/js/main.9a903899.chunk.js"
+  ]
+}
