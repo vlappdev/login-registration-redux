@@ -14,15 +14,17 @@ class App extends Component {
         super(props);
 
         history.listen((location, action) => {
+
             //clear alert on location changes
             this.props.clearAlerts()
         });
     }
     render() {
-        const { message } = this.props;
+        const { alertReducer } = this.props;
+        console.log(this.props);
         return (
-            <div>
-                { message && <div>{message}</div>}
+            <div className="shadow col-sm-6 col-lg-4 border p-5">
+                { alertReducer.message && <div className={`alert ${ alertReducer.type }`}>{ alertReducer.message }</div>}
                 <Router history={history}>
                     <Switch>
                         <PrivateRoute exact path="/" component={ MemberPage }/>
@@ -37,7 +39,7 @@ class App extends Component {
 
 const mapStateToProps = (state) =>{
     const { alertReducer } = state;
-    return alertReducer
+    return { alertReducer }
 };
 
 

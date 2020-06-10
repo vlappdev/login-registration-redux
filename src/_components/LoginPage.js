@@ -40,26 +40,32 @@ class LoginPage extends Component{
     };
 
     render(){
-        // console.log(this.email);
-        // console.log(this.submitted);
+        const{ email, password, submitted } = this.state;
+        console.log(this.props)
         return (
             <div>
-                <h1>Log in</h1>
+                <h1>Login</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Email
-                        <input name="email" onChange={this.handleChange} value={this.state.email} type="email" placeholder="Email" />
-                        { this.state.submitted && !this.state.email &&
-                        <div>Username is required</div> }
-                    </label>
-                    <label>
-                        Password
-                        <input name="password" onChange={this.handleChange} value={this.state.password} type="password" placeholder="Password" />
-                        { this.state.submitted && !this.state.password &&
-                        <div>Password is required</div>}
-                    </label>
-                    <button type="submit">Log in</button>
-                    <Link to="/register" className="btn-link">Register</Link>
+                    <div className="form-group">
+                        <label className="d-block">
+                            Email address
+                            <input type="email" onChange={this.handleChange} value={ email }
+                                   name="email" className={"form-control" + (submitted && !email ? " is-invalid": "")} placeholder="Enter email"/>
+                            { submitted && !email &&
+                            <div className="invalid-feedback">Email is required</div> }
+                        </label>
+                    </div>
+                    <div className="form-group">
+                        <label className="d-block">
+                            Password
+                            <input type="password" onChange={this.handleChange} value={ password }
+                                   name="password" className={"form-control" + (submitted && !password ? " is-invalid": "")} placeholder="Password"/>
+                            { submitted && !password &&
+                            <div className="invalid-feedback">Password is required</div> }
+                        </label>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Login</button>
+                    <Link to="/register" className="btn text-primary">Register</Link>
                 </form>
             </div>
         );
@@ -69,7 +75,9 @@ class LoginPage extends Component{
 
 
 const mapStateToProps = (state) => {
-     const { loggedIn } = state.authenticationReducer;
+    //const alert = state.alertReducer;
+    const { loggedIn } = state.authenticationReducer;
+    //return { alert, loggedIn }
     return { loggedIn }
 };
 
