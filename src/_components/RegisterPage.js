@@ -43,25 +43,30 @@ class RegisterPage extends Component{
     };
 
     render(){
-
+        console.log(this.props);
+        const{ user, submitted} = this.state;
+        const { alert } = this.props;
         return (
-            <div>
+            <div className="shadow col-sm-6 col-lg-4 border p-5">
+                { alert.message && <div className={`alert ${ alert.type }`}>{ alert.message }</div>}
                 <h1>Register</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
+                    <label className="d-block mb-3">
                         Email
-                        <input name="email" onChange={this.handleChange} value={this.state.user.email} type="email" placeholder="Email" />
-                        { this.state.submitted && !this.state.email &&
+                        <input type="email" onChange={this.handleChange} value={user.email}
+                               name="email" className={"form-control" + (submitted && !user.email ? " is-invalid": "")} placeholder="Email" />
+                        { submitted && !user.email &&
                         <div>Email is required</div> }
                     </label>
-                    <label>
+                    <label className="d-block mb-3">
                         Password
-                        <input name="password" onChange={this.handleChange} value={this.state.user.password} type="password" placeholder="Password" />
-                        { this.state.submitted && !this.state.password &&
-                        <div>Password is required</div>}
+                        <input type="password" onChange={this.handleChange} value={user.password}
+                               name="password" className={"form-control" + (submitted && !user.password ? " is-invalid": "")} placeholder="Password" />
+                        { submitted && !user.password &&
+                        <div className="invalid-feedback">Password is required</div>}
                     </label>
-                    <button type="submit">Register</button>
-                    <Link to="/login" className="btn-link">LOGIN</Link>
+                    <button type="submit" className="btn btn-primary">Register</button>
+                    <Link to="/login" className="btn text-primary">Cancel</Link>
                 </form>
             </div>
         );
@@ -69,8 +74,9 @@ class RegisterPage extends Component{
 }
 
 const mapStateToProps = (state) => {
+    const alert = state.alertReducer;
     const{ registering } = state.registrationReducer
-    return { registering }
+    return { alert, registering }
 };
 
 //MapDispatchToProps

@@ -21,19 +21,12 @@ $theme-colors: (
 @import "../node_modules/bootstrap/scss/navbar";
 @import "../node_modules/bootstrap/scss/alert";
 
-html, body{
+html, body, #root{
     height: 100%;
 }
 
-#root{
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack:center;
-    -ms-flex-pack:center;
-    justify-content:center;
-    -webkit-box-align:center;
-    -ms-flex-align:center;
-    align-items:center;
+.btn-logout{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }

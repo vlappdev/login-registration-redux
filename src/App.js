@@ -20,11 +20,11 @@ class App extends Component {
         });
     }
     render() {
-        const { alertReducer } = this.props;
+        // const { alertReducer } = this.props;
         console.log(this.props);
         return (
-            <div className="shadow col-sm-6 col-lg-4 border p-5">
-                { alertReducer.message && <div className={`alert ${ alertReducer.type }`}>{ alertReducer.message }</div>}
+            <div className="d-flex justify-content-center align-items-center h-100 position-relative">
+                {/*{ alertReducer.message && <div className={`alert ${ alertReducer.type }`}>{ alertReducer.message }</div>}*/}
                 <Router history={history}>
                     <Switch>
                         <PrivateRoute exact path="/" component={ MemberPage }/>
