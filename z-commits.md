@@ -17,3 +17,4 @@
 12 - added style for Login page
 13 - added style for Registration page
 14 - set project for gh-pages
+15 - moved redux logger to devDependencies
