@@ -2,7 +2,7 @@
 let user = localStorage.getItem('email');
 const initialState = user ? {loggedIn: true, user} : {};
 
-export const authenticationReducer = (state = initialState, action) => {
+const authenticationReducer = (state = initialState, action) => {
     switch (action.type) {
         case "LOGIN_REQUEST":
             return {
@@ -22,3 +22,5 @@ export const authenticationReducer = (state = initialState, action) => {
             return state
     }
 };
+
+export default authenticationReducer

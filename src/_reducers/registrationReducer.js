@@ -1,5 +1,4 @@
 
-
 const registrationReducer = (state = {}, action) => {
 
     switch (action.typeof){

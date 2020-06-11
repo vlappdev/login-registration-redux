@@ -1,5 +1,5 @@
 
-export const alertReducer = (state = {}, action) => {
+const alertReducer = (state = {}, action) => {
     switch(action.type){
         case "ALERT_SUCCESS":
             return {
@@ -17,3 +17,5 @@ export const alertReducer = (state = {}, action) => {
             return state
     }
 };
+
+export default alertReducer

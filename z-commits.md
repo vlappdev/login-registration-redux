@@ -19,4 +19,5 @@
 14 - set project for gh-pages
 15 - moved redux logger to devDependencies
 16 - added gh-pages
-17 - fixed userService (registration) 
+17 - fixed userService (registration)
+18 - fixed reducers
