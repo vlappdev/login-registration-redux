@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux'
-//import { authentication  } from './authenticationReducer'
 import registrationReducer from './registrationReducer'
 import {authenticationReducer} from './authenticationReducer'
 import { alertReducer } from './alertReducer'

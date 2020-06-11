@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import { Router, Route, Redirect, Switch } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { history } from './_helpers/history'
 
+import { history } from './_helpers/history'
 import PrivateRoute from './_components/PrivateRoute'
 import { LoginPage } from './_components/LoginPage'
 import { RegisterPage } from './_components/RegisterPage'
@@ -20,11 +20,8 @@ class App extends Component {
         });
     }
     render() {
-        // const { alertReducer } = this.props;
-        console.log(this.props);
         return (
             <div className="d-flex justify-content-center align-items-center h-100 position-relative">
-                {/*{ alertReducer.message && <div className={`alert ${ alertReducer.type }`}>{ alertReducer.message }</div>}*/}
                 <Router history={history}>
                     <Switch>
                         <PrivateRoute exact path="/" component={ MemberPage }/>

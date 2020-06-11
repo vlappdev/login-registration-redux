@@ -7,15 +7,11 @@ import firebaseAuth from '../firebase'
     };
 
     function register(user) {
-
-            console.log(user.email);
-            console.log(user.password);
         return firebaseAuth.auth().createUserWithEmailAndPassword(user.email, user.password)
-            .then(param => {
-                console.log(param);
+            .then(res => {
+                return res.user.email;
             })
             .catch((error) => {
-                console.log(error);
                 return Promise.reject(error)
             })
     }
@@ -27,7 +23,6 @@ import firebaseAuth from '../firebase'
                 return user
             })
             .catch((error)=>{
-                console.log(error)
                 return Promise.reject(error)
             })
     }

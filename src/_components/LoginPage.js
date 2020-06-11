@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-//import { Redirect } from 'react-router'
 import { Link } from 'react-router-dom'
 
-//import firebaseAuth from '../firebase'
 import { userActions } from '../_actions/userActions'
 
 class LoginPage extends Component{
@@ -42,7 +40,6 @@ class LoginPage extends Component{
     render(){
         const{ email, password, submitted } = this.state;
         const { alert } = this.props;
-        console.log(this.props)
         return (
             <div className="shadow col-sm-6 col-lg-4 border p-5">
                 { alert.message && <div className={`alert ${ alert.type }`}>{ alert.message }</div>}

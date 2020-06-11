@@ -18,10 +18,9 @@ import { alertActions } from './alertActions'
                     (user) => {
                         dispatch(success());
                         history.push('/login')
-                        dispatch(alertActions.success('Registration successful'))
+                        dispatch(alertActions.success(`Registration successful ${user}`))
                     },
                     error => {
-                        console.log(error.message);
                         dispatch(alertActions.error(error.message))
                     }
                 )
@@ -46,7 +45,7 @@ import { alertActions } from './alertActions'
 
         return dispatch => {
             //dispatch(request({ email }))
-            const test = userService.login( email, password )
+            userService.login( email, password )
                 .then(
                     user => {
                         console.log(user)
@@ -58,8 +57,6 @@ import { alertActions } from './alertActions'
                         dispatch(alertActions.error(error.message));
                     }
                 );
-
-            console.log(test)
         };
 
         function request(user){

@@ -43,7 +43,6 @@ class RegisterPage extends Component{
     };
 
     render(){
-        console.log(this.props);
         const{ user, submitted} = this.state;
         const { alert } = this.props;
         return (
