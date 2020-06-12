@@ -1,6 +1,5 @@
 
 const registrationReducer = (state = {}, action) => {
-
     switch (action.typeof){
         case "REGISTER_REQUEST":
             return {
