@@ -22,3 +22,4 @@
 17 - fixed userService (registration)
 18 - fixed reducers
 20 - fired helpers
+21 - fixed components

@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Link } from "react-router-dom"
 import { connect } from 'react-redux'
 
-
 import { userActions } from'../_actions/userActions'
-import registrationReducer from "../_reducers/registrationReducer";
-import {Link} from "react-router-dom";
 
 class RegisterPage extends Component{
 
@@ -52,15 +50,15 @@ class RegisterPage extends Component{
                 <form onSubmit={this.handleSubmit}>
                     <label className="d-block mb-3">
                         Email
-                        <input type="email" onChange={this.handleChange} value={user.email}
-                               name="email" className={"form-control" + (submitted && !user.email ? " is-invalid": "")} placeholder="Email" />
+                        <input type="email" onChange={this.handleChange} value={user.email} name="email"
+                               className={"form-control" + (submitted && !user.email ? " is-invalid": "")} placeholder="Email" />
                         { submitted && !user.email &&
                         <div>Email is required</div> }
                     </label>
                     <label className="d-block mb-3">
                         Password
-                        <input type="password" onChange={this.handleChange} value={user.password}
-                               name="password" className={"form-control" + (submitted && !user.password ? " is-invalid": "")} placeholder="Password" />
+                        <input type="password" onChange={this.handleChange} value={user.password} name="password"
+                               className={"form-control" + (submitted && !user.password ? " is-invalid": "")} placeholder="Password" />
                         { submitted && !user.password &&
                         <div className="invalid-feedback">Password is required</div>}
                     </label>

@@ -47,17 +47,15 @@ class LoginPage extends Component{
                 <form onSubmit={this.handleSubmit}>
                     <label className="d-block mb-3">
                         Email
-                        <input type="email" onChange={this.handleChange} value={ email }
-                               name="email" className={"form-control" + (submitted && !email ? " is-invalid": "")} placeholder="Enter email"/>
+                        <input type="email" onChange={this.handleChange} value={ email } name="email"
+                               className={"form-control" + (submitted && !email ? " is-invalid": "")} placeholder="Enter email"/>
                         { submitted && !email &&
                         <div className="invalid-feedback">Email is required</div> }
                     </label>
-
-
                     <label className="d-block mb-3">
                         Password
-                        <input type="password" onChange={this.handleChange} value={ password }
-                               name="password" className={"form-control" + (submitted && !password ? " is-invalid": "")} placeholder="Password"/>
+                        <input type="password" onChange={this.handleChange} value={ password } name="password"
+                               className={"form-control" + (submitted && !password ? " is-invalid": "")} placeholder="Password"/>
                         { submitted && !password &&
                         <div className="invalid-feedback">Password is required</div> }
                     </label>

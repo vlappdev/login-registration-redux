@@ -1,10 +1,8 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom'
 
-
 const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
 
-    console.log(localStorage.getItem('email'));
     return (
         <Route
             { ...rest }
