@@ -21,3 +21,4 @@
 16 - added gh-pages
 17 - fixed userService (registration)
 18 - fixed reducers
+20 - fired helpers
