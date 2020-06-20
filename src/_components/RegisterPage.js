@@ -51,14 +51,14 @@ class RegisterPage extends Component{
                     <label className="d-block mb-3">
                         Email
                         <input type="email" onChange={this.handleChange} value={user.email} name="email"
-                               className={"form-control" + (submitted && !user.email ? " is-invalid": "")} placeholder="Email" />
+                               className={"form-control" + (submitted && !user.email ? " is-invalid": "")} placeholder="Enter email" />
                         { submitted && !user.email &&
                         <div>Email is required</div> }
                     </label>
                     <label className="d-block mb-3">
                         Password
                         <input type="password" onChange={this.handleChange} value={user.password} name="password"
-                               className={"form-control" + (submitted && !user.password ? " is-invalid": "")} placeholder="Password" />
+                               className={"form-control" + (submitted && !user.password ? " is-invalid": "")} placeholder="Enter password" />
                         { submitted && !user.password &&
                         <div className="invalid-feedback">Password is required</div>}
                     </label>

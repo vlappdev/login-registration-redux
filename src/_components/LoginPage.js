@@ -55,7 +55,7 @@ class LoginPage extends Component{
                     <label className="d-block mb-3">
                         Password
                         <input type="password" onChange={this.handleChange} value={ password } name="password"
-                               className={"form-control" + (submitted && !password ? " is-invalid": "")} placeholder="Password"/>
+                               className={"form-control" + (submitted && !password ? " is-invalid": "")} placeholder="Enter password"/>
                         { submitted && !password &&
                         <div className="invalid-feedback">Password is required</div> }
                     </label>
