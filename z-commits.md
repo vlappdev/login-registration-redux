@@ -23,3 +23,4 @@
 18 - fixed reducers
 20 - fired helpers
 21 - fixed components
+22 - fixed removed logger

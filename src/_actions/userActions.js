@@ -11,8 +11,6 @@ import { alertActions } from './alertActions'
     function register(user){
 
         return dispatch => {
-            dispatch(request(user));
-
             userService.register(user)
                 .then(
                     (user) => {
@@ -20,18 +18,12 @@ import { alertActions } from './alertActions'
                         history.push('/login')
                         dispatch(alertActions.success(`Registration successful ${user}`))
                     },
-                    error => {
+                    (error) => {
+                        dispatch(failure(error.message));
                         dispatch(alertActions.error(error.message))
                     }
                 )
         };
-
-        function request(user){
-            return {
-                type: "REGISTER_REQUEST",
-                user
-            }
-        }
 
         function success(user){
             return {
@@ -39,16 +31,20 @@ import { alertActions } from './alertActions'
                 user
             }
         }
+        function failure(error){
+            return {
+                type: "REGISTER_FAILURE",
+                error
+            }
+        }
     }
 
     function login(email, password) {
 
         return dispatch => {
-            //dispatch(request({ email }))
             userService.login( email, password )
                 .then(
                     user => {
-                        console.log(user)
                         dispatch( success(user) );
                         history.push('/')
                     },
@@ -58,14 +54,6 @@ import { alertActions } from './alertActions'
                     }
                 );
         };
-
-        function request(user){
-            console.log(user);
-            return {
-                type: "LOGIN_REQUEST",
-                user
-            }
-        }
 
         function success(user){
             return {
