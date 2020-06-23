@@ -28,3 +28,4 @@
 24 - update README file
 25 - added redux-logger
 26 - refactored alertActions
+27 - removed redux-logger
