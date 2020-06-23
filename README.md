@@ -1,4 +1,4 @@
-Demo : https://jahorinac.github.io/02-firebase-redux-react
+Demo : https://vlappdev.github.io/task-manager-redux
 
 ## Registration and Login (React app with Firebase and Redux)
 
