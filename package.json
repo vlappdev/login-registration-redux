@@ -1,6 +1,6 @@
 {
   "homepage": "https://vlappdev.github.io/login-registration-redux",
-  "name": "02-firebase-redux-react",
+  "name": "login-registration-redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
