@@ -26,3 +26,4 @@
 22 - fixed removed logger
 23 - fixed README file
 24 - update README file
+25 - added redux-logger
