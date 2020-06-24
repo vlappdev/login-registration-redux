@@ -3,13 +3,13 @@ import 'firebase/auth'
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
-    databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
-    appId: process.env.REACT_APP_FIREBASE_APP_ID
+    apiKey: "AIzaSyAMtZa_T7v3ZXspkVB7bbdXzjE2ymZsZj4",
+    authDomain: "fir-react-auth-8ee30.firebaseapp.com",
+    databaseURL: "https://fir-react-auth-8ee30.firebaseio.com",
+    projectId: "fir-react-auth-8ee30",
+    storageBucket: "fir-react-auth-8ee30.appspot.com",
+    messagingSenderId: "785008082425",
+    appId: "1:785008082425:web:38282fc89b919dc080d128"
 };
 // Initialize Firebase
 const firebaseAuth = firebase.initializeApp(firebaseConfig);
