@@ -30,3 +30,4 @@
 26 - refactored alertActions
 27 - removed redux-logger
 28 - update .env file
+29 - added .editorconfig
